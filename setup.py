@@ -14,10 +14,7 @@ if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
     sys.exit()
 
-required = [
-    'requests>=0.10.0',
-    'python-dateutil==1.5'
-]
+required = open('requirements.txt').read().split('\n')[:-1]
 
 
 setup(
